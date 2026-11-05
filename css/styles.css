@@ -450,3 +450,26 @@ h2 .sec-head__bar { margin-right: 0; }
   .site-header.is-top .topbar__items { padding: 8px var(--gutter); }
   .site-header.is-top .subnav { padding: 0 var(--gutter) 10px; height: auto; }
 }
+
+/* Héroe a ancho completo: la foto de la PC cubre todo el banner y el texto va sobre un degradado */
+.hero {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center;
+  min-height: 520px; margin-top: 28px; padding: 56px 56px; border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line); background: var(--bg-2);
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(10, 15, 29, 0.97) 0%, rgba(10, 15, 29, 0.82) 40%, rgba(10, 15, 29, 0.25) 75%, rgba(10, 15, 29, 0.1) 100%);
+}
+.hero__media { position: absolute; inset: 0; margin: 0; border-radius: 0; box-shadow: none; aspect-ratio: auto; overflow: hidden; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 75% center; }
+.hero__copy { position: relative; z-index: 2; max-width: 600px; }
+@media (max-width: 900px) {
+  .hero { min-height: 480px; padding: 32px 24px; }
+  .hero::before { background: linear-gradient(180deg, rgba(10, 15, 29, 0.55) 0%, rgba(10, 15, 29, 0.92) 65%, rgba(10, 15, 29, 0.97) 100%); }
+  .hero__media img { object-position: 80% center; }
+}
+@media (max-width: 767px) {
+  .hero { min-height: 460px; padding: 24px 18px; align-items: end; margin-top: 18px; }
+  .hero__media { aspect-ratio: auto; }
+}
