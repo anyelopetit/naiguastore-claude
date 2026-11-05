@@ -1,0 +1,29 @@
+# NaiguaStore
+
+> NaiguaStore es una tienda de componentes para PC nuevos en Naiguatá, La Guaira, Venezuela. Vende procesadores, tarjetas gráficas, placas base, almacenamiento y memoria RAM con 90 días de garantía por defecto de fábrica, envíos a todo el país y pagos con Binance, Zelle, Pago Móvil o efectivo.
+
+Contacto y compras: WhatsApp +58 414-638-0868 (https://wa.me/584146380868). Precios en USD.
+
+## Productos
+- [AMD Ryzen 7 7800X3D](https://anyelopetit.github.io/naiguastore-claude/producto/amd-ryzen-7-7800x3d/): 399.99 USD, en stock
+- [NVIDIA GeForce RTX 4060](https://anyelopetit.github.io/naiguastore-claude/producto/nvidia-rtx-4060/): 500.00 USD, en stock
+- [NVIDIA GeForce RTX 4070 SUPER 12 GB](https://anyelopetit.github.io/naiguastore-claude/producto/nvidia-rtx-4070-super/): 599.00 USD, agotado
+- [ASUS ROG Strix B650E-F Gaming WiFi](https://anyelopetit.github.io/naiguastore-claude/producto/asus-rog-strix-b650e-f/): 260.00 USD, en stock
+- [Samsung 990 PRO 2 TB NVMe PCIe 4.0](https://anyelopetit.github.io/naiguastore-claude/producto/samsung-990-pro-2tb/): 169.99 USD, en stock
+- [Corsair Vengeance RGB 32 GB (2×16 GB) DDR5-6000](https://anyelopetit.github.io/naiguastore-claude/producto/corsair-vengeance-32gb/): 114.99 USD, en stock
+
+## Políticas
+- Garantía: 90 días directa en tienda contra defectos de fabricación. No cubre daños físicos, cortocircuitos por variaciones eléctricas ni fuentes de poder genéricas insuficientes.
+- Envíos: a todo el país. Costo y tiempo se confirman por WhatsApp antes de pagar.
+- Entregas locales: Naiguatá y La Guaira.
+- Pagos: Binance, Zelle, Pago Móvil y efectivo. Los datos de pago se envían por WhatsApp después de confirmar el pedido. La web no pide datos de tarjeta.
+- Asesoría de compatibilidad: por WhatsApp.
+
+## Preguntas frecuentes
+- ¿Cuánto dura la garantía? Los componentes nuevos tienen 90 días de garantía directa en tienda contra defectos de fabricación. Si tu pieza presenta uno, te la gestionamos por WhatsApp.
+- ¿Qué no cubre la garantía? Daños físicos (pines doblados, golpes, humedad), cortocircuitos por variaciones eléctricas y el uso de fuentes de poder genéricas insuficientes para el equipo.
+- ¿Hacen envíos fuera de La Guaira? Sí, enviamos a todo el país. El costo y el tiempo dependen de la ciudad, y te los confirmamos por WhatsApp antes de que pagues.
+- ¿Qué métodos de pago aceptan? Binance, Zelle, Pago Móvil y efectivo. Te enviamos los datos de pago por WhatsApp después de confirmar tu pedido. En la web no pedimos datos de tarjeta.
+- ¿Hacen entregas locales? Sí, hacemos entregas locales en Naiguatá y La Guaira. Coordínalas por WhatsApp.
+- ¿Cómo sé si un producto está disponible? Cada ficha indica si está en stock. Si está agotado, el botón Avísame abre un WhatsApp para que te escribamos cuando llegue.
+- ¿Ayudan a elegir componentes compatibles? Sí, por WhatsApp. Revisamos la compatibilidad entre procesador, placa base, memoria y fuente antes de que compres.

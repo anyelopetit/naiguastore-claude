@@ -1,16 +1,48 @@
 {
   "storeName": "NaiguaStore",
-  "tagline": "Componentes de calidad · Envíos rápidos",
+  "tagline": "Componentes para PC nuevos, con garantía de 90 días",
   "whatsapp": "584146380868",
   "location": "Naiguatá / La Guaira, Venezuela",
   "bsRate": null,
   "gaId": null,
   "featuredId": "amd-ryzen-7-7800x3d",
-  "payments": ["Binance", "Zelle", "Pago Móvil", "Efectivo"],
+  "payments": [
+    "Binance",
+    "Zelle",
+    "Pago Móvil",
+    "Efectivo"
+  ],
   "states": [
-    "Amazonas", "Anzoátegui", "Apure", "Aragua", "Barinas", "Bolívar", "Carabobo", "Cojedes",
-    "Delta Amacuro", "Distrito Capital", "Falcón", "Guárico", "Lara", "Mérida", "Miranda",
-    "Monagas", "Nueva Esparta", "Portuguesa", "Sucre", "Táchira", "Trujillo", "La Guaira",
-    "Yaracuy", "Zulia"
-  ]
+    "Amazonas",
+    "Anzoátegui",
+    "Apure",
+    "Aragua",
+    "Barinas",
+    "Bolívar",
+    "Carabobo",
+    "Cojedes",
+    "Delta Amacuro",
+    "Distrito Capital",
+    "Falcón",
+    "Guárico",
+    "Lara",
+    "Mérida",
+    "Miranda",
+    "Monagas",
+    "Nueva Esparta",
+    "Portuguesa",
+    "Sucre",
+    "Táchira",
+    "Trujillo",
+    "La Guaira",
+    "Yaracuy",
+    "Zulia"
+  ],
+  "siteUrl": "https://anyelopetit.github.io/naiguastore-claude",
+  "phoneDisplay": "+58 414-638-0868",
+  "address": {
+    "locality": "Naiguatá",
+    "region": "La Guaira",
+    "country": "VE"
+  }
 }

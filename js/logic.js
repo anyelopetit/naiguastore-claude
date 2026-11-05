@@ -77,7 +77,7 @@
         : "Retiro en Naiguatá / La Guaira";
 
     return [
-      "Hola NaiguaStore, quiero confirmar mi pedido 🛒",
+      "Hola NaiguaStore, quiero confirmar mi pedido",
       `Pedido: ${order.id}`,
       "",
       "PRODUCTOS",

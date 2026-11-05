@@ -1,0 +1,30 @@
+[
+  {
+    "q": "¿Cuánto dura la garantía?",
+    "a": "Los componentes nuevos tienen 90 días de garantía directa en tienda contra defectos de fabricación. Si tu pieza presenta uno, te la gestionamos por WhatsApp."
+  },
+  {
+    "q": "¿Qué no cubre la garantía?",
+    "a": "Daños físicos (pines doblados, golpes, humedad), cortocircuitos por variaciones eléctricas y el uso de fuentes de poder genéricas insuficientes para el equipo."
+  },
+  {
+    "q": "¿Hacen envíos fuera de La Guaira?",
+    "a": "Sí, enviamos a todo el país. El costo y el tiempo dependen de la ciudad, y te los confirmamos por WhatsApp antes de que pagues."
+  },
+  {
+    "q": "¿Qué métodos de pago aceptan?",
+    "a": "Binance, Zelle, Pago Móvil y efectivo. Te enviamos los datos de pago por WhatsApp después de confirmar tu pedido. En la web no pedimos datos de tarjeta."
+  },
+  {
+    "q": "¿Hacen entregas locales?",
+    "a": "Sí, hacemos entregas locales en Naiguatá y La Guaira. Coordínalas por WhatsApp."
+  },
+  {
+    "q": "¿Cómo sé si un producto está disponible?",
+    "a": "Cada ficha indica si está en stock. Si está agotado, el botón Avísame abre un WhatsApp para que te escribamos cuando llegue."
+  },
+  {
+    "q": "¿Ayudan a elegir componentes compatibles?",
+    "a": "Sí, por WhatsApp. Revisamos la compatibilidad entre procesador, placa base, memoria y fuente antes de que compres."
+  }
+]
