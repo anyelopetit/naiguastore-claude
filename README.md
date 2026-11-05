@@ -20,15 +20,15 @@ index.html                 Portada generada (contenido completo para buscadores)
 producto/<id>/index.html   Una página estática por producto (generada)
 sitemap.xml, llms.txt      Generados
 scripts/build.mjs          Generador de páginas, sitemap y llms.txt
-js/templates.js            Plantillas compartidas: etiqueta de caja, tarjetas, iconos
+js/templates.js            Plantillas compartidas: tarjetas de producto e iconos
 js/logic.js                Lógica pura: carrito, precios, validación, mensaje de WhatsApp
 js/app.js                  Carrito, buscador, filtros, checkout y gracias
-css/styles.css             Diseño: etiquetas de caja, tipografía Barlow, responsive
+css/styles.css             Diseño: identidad de la referencia (azul marino, dorado, tarjetas blancas), responsive
 data/config.json           WhatsApp, URL del sitio, tasa Bs, ID de GA4, estados, pagos
 data/products.json         Catálogo
 data/faq.json              Preguntas frecuentes (se usan en la página y en los datos estructurados)
 robots.txt                 Permite buscadores y bots de IA
-assets/                    Favicon, placeholder y carpeta de fotos de producto
+assets/img/                 Logo y fotos de categoría (CPU, GPU, RAM, SSD, placas, periféricos, PC)
 ```
 
 ## Antes de publicar
@@ -51,7 +51,7 @@ assets/                    Favicon, placeholder y carpeta de fotos de producto
 
 ## Pendiente
 
-- Fotos reales de producto (ahora la etiqueta muestra un dibujo del componente).
+- Fotos reales de cada producto: hoy cada tarjeta usa la foto de su categoría (dos GPU comparten foto).
 - Imagen para compartir en redes (`og:image`, 1200×630).
 - Buscador a pantalla completa en móvil, vista rápida y envío calculado por zona.
 - Páginas de políticas completas (envíos y devoluciones).

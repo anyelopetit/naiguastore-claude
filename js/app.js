@@ -65,6 +65,7 @@
     const count = NS.cartCount(state.cart);
     $("#cart-count").textContent = count;
     $("#cart-count-mobile").textContent = count;
+    $("#cart-total-header").textContent = NS.fmtUSD(total);
     const bodyEl = $("#cart-body");
     if (!lines.length) {
       bodyEl.innerHTML = `<div class="cart-empty"><p>Tu carrito está vacío.</p>
@@ -110,7 +111,7 @@
   // La imagen del producto vuela al carrito (se omite con movimiento reducido).
   function flyToCart(card) {
     if (reduceMotion || !card) return;
-    const from = card.querySelector(".label__window img") || card.querySelector(".label__icon");
+    const from = card.querySelector(".pcard__media img") || card.querySelector(".pdp__media img");
     const to = $("#cart-open");
     if (!from || !to) return;
     const a = from.getBoundingClientRect();
@@ -137,7 +138,7 @@
     NS.addToCart(state.cart, id, Math.min(NS.MAX_QTY, p.stock || NS.MAX_QTY));
     saveCart();
     track("add_to_cart", { currency: "USD", value: p.price, items: [{ item_id: p.id, item_name: p.name, price: p.price }] });
-    flyToCart(btn && btn.closest(".label"));
+    flyToCart(btn && btn.closest(".pcard, .pdp"));
     const counter = $("#cart-count");
     counter.classList.remove("bump");
     void counter.offsetWidth;
@@ -170,6 +171,8 @@
       ? all.map((p) => T.card(p, ctx())).join("")
       : `<p class="empty">No encontramos productos con ese filtro. <button class="link" type="button" data-cat="Todas">Ver todo</button></p>`;
     $("#count").textContent = `${all.length} producto${all.length === 1 ? "" : "s"}`;
+    const catSelect = document.querySelector("[data-cat-select]");
+    if (catSelect) catSelect.value = state.filters.category;
     document.querySelectorAll(".chip").forEach((c) => {
       const on = c.dataset.cat === state.filters.category;
       c.classList.toggle("is-on", on);
@@ -377,6 +380,10 @@
     }
     if (ev.target.matches("[data-sort]")) {
       state.filters.sort = ev.target.value;
+      renderCatalog();
+    }
+    if (ev.target.matches("[data-cat-select]")) {
+      state.filters.category = ev.target.value;
       renderCatalog();
     }
   });
