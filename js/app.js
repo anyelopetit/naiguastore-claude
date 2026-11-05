@@ -100,12 +100,12 @@
   function openCart() {
     renderCart();
     $("#cart").classList.add("is-open");
-    $("#cart").setAttribute("aria-hidden", "false");
+    $("#cart").inert = false;
     $("#cart-close").focus();
   }
   function closeCart() {
     $("#cart").classList.remove("is-open");
-    $("#cart").setAttribute("aria-hidden", "true");
+    $("#cart").inert = true;
   }
 
   // La imagen del producto vuela al carrito (se omite con movimiento reducido).

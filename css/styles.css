@@ -266,6 +266,8 @@ h2 .sec-head__bar { margin-right: 0; }
 .pdp__info .pcard__cat { color: var(--blue-hover); }
 .pdp__info .pcard__avail { color: #e8edf8; }
 .pdp__info .lead { margin: 0; }
+.pdp__info .price__usd { color: var(--text); }
+.pdp__info .price__cur { color: var(--muted); }
 .specs { padding-left: 18px; color: #c7d0e3; margin: 0; }
 .pdp__actions { display: grid; gap: 10px; }
 .related { margin-top: 48px; }
@@ -372,7 +374,14 @@ h2 .sec-head__bar { margin-right: 0; }
   .pcard__actions .btn--wa { display: none; }
   .badge { top: 8px; left: 8px; font-size: 11px; padding: 4px 8px; }
   .catalog__bar { flex-direction: column; align-items: stretch; }
-  .chips { margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
+  .catalog__bar > * { min-width: 0; max-width: 100%; }
+  .brand img { width: 44px; height: 44px; }
+  .topbar__item, .cart-btn, .sec-head__link, .chip, .subnav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .sort select { height: 44px; }
+  .pcard__name a { display: inline-block; padding: 8px 0; }
+  .pcard__actions .btn--primary, .pcard__actions .btn--line { min-height: 44px; }
+  .qty button { width: 44px; height: 44px; }
+  .chips { width: 100%; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
   .steps { grid-template-columns: 1fr; }
   .warranty__cols { grid-template-columns: 1fr; }
   .advisor { flex-direction: column; align-items: flex-start; }
@@ -387,4 +396,27 @@ h2 .sec-head__bar { margin-right: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Ajustes de accesibilidad táctil (WCAG 2.5.5) ---------- */
+@media (max-width: 767px) {
+  .faq summary { min-height: 44px; align-items: center; }
+  .site-footer nav a, .site-footer__contact a { display: inline-flex; align-items: center; min-height: 44px; }
+  .site-footer__contact p { min-height: 44px; }
+  .bottom-nav a, .bottom-nav button { min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .icon-btn { width: 44px; height: 44px; display: grid; place-items: center; padding: 0; }
+  .crumbs a { display: inline-block; padding: 12px 0; }
+  .crumbs { line-height: 1.2; }
+}
+
+/* Objetivos táctiles en cualquier dispositivo de pantalla táctil (incluye tabletas de 768 px) */
+@media (pointer: coarse) {
+  .topbar__item, .cart-btn, .sec-head__link, .chip, .subnav a, .sort select { min-height: 44px; display: inline-flex; align-items: center; }
+  .subnav a { padding: 0 2px; }
+  .hint a { display: inline-block; padding: 12px 0; }
+  .crumbs a { padding: 14px 0; }
+}
+@media (pointer: coarse) {
+  .topbar__item { padding: 0 6px; }
+  .pcard__name a { display: inline-block; padding: 8px 0; }
 }

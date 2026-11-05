@@ -87,8 +87,8 @@ function shell({ base, page, title, description, canonical, jsonld = [], body })
         <button class="search__btn" type="submit" aria-label="Buscar">${svg("search")}</button>
       </form>
       <div class="topbar__items">
-        <a class="topbar__item" href="${home}#garantia">${svg("shield")}<span>Garantía</span></a>
-        <a class="topbar__item" href="${home}#envios">${svg("truck")}<span>Envíos</span></a>
+        <a class="topbar__item" href="${home}#garantia" aria-label="Garantía de 90 días">${svg("shield")}<span>Garantía</span></a>
+        <a class="topbar__item" href="${home}#envios" aria-label="Envíos">${svg("truck")}<span>Envíos</span></a>
         <button class="cart-btn" id="cart-open" type="button" aria-label="Abrir carrito">
           ${svg("cart")}
           <span class="cart-btn__count" id="cart-count">0</span>
@@ -142,7 +142,7 @@ ${body}
     <a href="${esc(waHref("Hola NaiguaStore, tengo una pregunta."))}" target="_blank" rel="noopener">WhatsApp</a>
   </nav>
 
-  <aside class="cart" id="cart" aria-hidden="true" aria-label="Carrito de compras">
+  <aside class="cart" id="cart" inert aria-label="Carrito de compras">
     <div class="cart__overlay" id="cart-overlay"></div>
     <div class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
       <header class="cart__head">

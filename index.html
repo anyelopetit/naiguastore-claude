@@ -40,8 +40,8 @@
         <button class="search__btn" type="submit" aria-label="Buscar"><svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       </form>
       <div class="topbar__items">
-        <a class="topbar__item" href="index.html#garantia"><svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Garantía</span></a>
-        <a class="topbar__item" href="index.html#envios"><svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17" cy="17.5" r="1.8" fill="currentColor"/></svg><span>Envíos</span></a>
+        <a class="topbar__item" href="index.html#garantia" aria-label="Garantía de 90 días"><svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Garantía</span></a>
+        <a class="topbar__item" href="index.html#envios" aria-label="Envíos"><svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17" cy="17.5" r="1.8" fill="currentColor"/></svg><span>Envíos</span></a>
         <button class="cart-btn" id="cart-open" type="button" aria-label="Abrir carrito">
           <svg class="" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2v2h2l3.6 7.6-1.4 2.4A2 2 0 0 0 7 17h12v-2H7.4l1.1-2h7.5a2 2 0 0 0 1.7-1l3.6-6.5A1 1 0 0 0 20.4 5H5.2l-.9-2H1z"/></svg>
           <span class="cart-btn__count" id="cart-count">0</span>
@@ -298,7 +298,7 @@
     <a href="https://wa.me/584146380868?text=Hola%20NaiguaStore%2C%20tengo%20una%20pregunta." target="_blank" rel="noopener">WhatsApp</a>
   </nav>
 
-  <aside class="cart" id="cart" aria-hidden="true" aria-label="Carrito de compras">
+  <aside class="cart" id="cart" inert aria-label="Carrito de compras">
     <div class="cart__overlay" id="cart-overlay"></div>
     <div class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
       <header class="cart__head">
