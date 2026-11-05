@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NaiguaStore · Componentes para tu PC</title>
+  <meta name="description" content="Componentes de PC nuevos con garantía de 90 días, envíos rápidos y asesoría por WhatsApp. Pagos en divisas y pago móvil.">
+  <meta name="theme-color" content="#0B0F1A">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "NaiguaStore",
+    "description": "Componentes de PC y hardware gaming nuevos con garantía de 90 días.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Naiguatá", "addressRegion": "La Guaira", "addressCountry": "VE" },
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "telephone": "+584146380868", "availableLanguage": "Spanish" }
+  }
+  </script>
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <svg class="loader__ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="44" pathLength="100"/>
+    </svg>
+    <p class="loader__name">Naigua<span>Store</span></p>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="brand" href="#/" aria-label="NaiguaStore, inicio">
+        <span class="brand__mark" aria-hidden="true">N</span>
+        <span class="brand__name">Naigua<span>Store</span></span>
+      </a>
+      <form class="search" role="search" onsubmit="return false">
+        <label class="sr-only" for="search">Buscar componentes</label>
+        <input id="search" type="search" placeholder="Buscar componentes, modelos, marcas…" autocomplete="off">
+      </form>
+      <button class="cart-btn" id="cart-open" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2v2h2l3.6 7.6-1.4 2.4A2 2 0 0 0 7 17h12v-2H7.4l1.1-2h7.5a2 2 0 0 0 1.7-1l3.6-6.5A1 1 0 0 0 20.4 5H5.2l-.9-2H1z"/></svg>
+        <span class="cart-btn__count" id="cart-count">0</span>
+      </button>
+    </div>
+    <nav class="site-header__nav" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#/checkout">Pedido</a>
+      <a href="https://wa.me/584146380868" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <p class="brand__name">Naigua<span>Store</span></p>
+        <p class="hint">Naiguatá / La Guaira, Venezuela · Envío a todo el país</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <a href="#/">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#/checkout">Pedido</a>
+      </nav>
+      <a class="btn btn--primary" href="https://wa.me/584146380868" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="hint center">© 2026 NaiguaStore. Todos los derechos reservados.</p>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Navegación móvil">
+    <a href="#/">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <button data-open-cart>Carrito <span class="bottom-nav__count" id="cart-count-mobile">0</span></button>
+    <a href="https://wa.me/584146380868" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+
+  <aside class="cart" id="cart" aria-hidden="true" aria-label="Carrito de compras">
+    <div class="cart__overlay" id="cart-overlay"></div>
+    <div class="cart__panel">
+      <header class="cart__head">
+        <h2>Tu carrito</h2>
+        <button class="icon-btn" id="cart-close" aria-label="Cerrar carrito">×</button>
+      </header>
+      <div class="cart__body" id="cart-body"></div>
+      <footer class="cart__foot" id="cart-footer" hidden>
+        <div class="sum-line"><span>Total estimado</span><span><strong id="cart-total">$0.00</strong><br><small id="cart-total-bs"></small></span></div>
+        <p class="hint">Envío se calcula al confirmar. No se te cobra nada todavía.</p>
+        <button class="btn btn--primary btn--block btn--lg" id="cart-checkout">Continuar al pedido</button>
+      </footer>
+    </div>
+  </aside>
+
+  <script src="js/logic.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
