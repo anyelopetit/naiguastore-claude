@@ -450,6 +450,35 @@
     hideLoader();
   }
 
+  // Cabecera móvil: al bajar queda solo el buscador; al subir reaparece el resto por encima del contenido.
+  // Estados: is-top (arriba, todo en flujo) · sin clase (revelada, superpuesta) · is-compact (solo buscador).
+  (function () {
+    const header = document.querySelector(".site-header");
+    let lastY = window.scrollY;
+    let ticking = false;
+    function update() {
+      const y = Math.max(0, window.scrollY);
+      const dy = y - lastY;
+      if (y < 60) {
+        header.classList.add("is-top");
+        header.classList.remove("is-compact");
+      } else {
+        header.classList.remove("is-top");
+        if (dy > 6) header.classList.add("is-compact");
+        else if (dy < -6) header.classList.remove("is-compact");
+      }
+      if (Math.abs(dy) > 6) lastY = y;
+      ticking = false;
+    }
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    update();
+  })();
+
   init();
   setTimeout(hideLoader, 2500);
 })();

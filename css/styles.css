@@ -420,3 +420,33 @@ h2 .sec-head__bar { margin-right: 0; }
   .topbar__item { padding: 0 6px; }
   .pcard__name a { display: inline-block; padding: 8px 0; }
 }
+
+/* ---------- Cabecera móvil compacta: solo el buscador; el resto se oculta al bajar y reaparece al subir ---------- */
+@media (max-width: 767px) {
+  .topbar { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 10px var(--gutter) 8px; }
+  .brand, .topbar__items, .search, .cart-btn { grid-row: auto; grid-column: auto; }
+  .topbar__items { justify-content: space-between; }
+  .site-header .search input { font-size: 16px; height: 44px; }
+  .site-header.is-compact .topbar { gap: 0; padding-top: 8px; padding-bottom: 8px; }
+  .site-header.is-compact .brand,
+  .site-header.is-compact .topbar__items,
+  .site-header.is-compact .subnav { display: none; }
+}
+
+/* Cabecera móvil: las filas de marca, accesos y categorías se superponen al bajar (sin mover el contenido) */
+@media (max-width: 767px) {
+  .site-header .brand,
+  .site-header .topbar__items,
+  .site-header .subnav {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 45; background: var(--bg);
+  }
+  .site-header .brand { top: 100%; height: 56px; display: flex; align-items: center; padding: 0 var(--gutter); box-shadow: 0 1px 0 var(--line); }
+  .site-header .topbar__items { top: calc(100% + 56px); height: 56px; padding: 0 var(--gutter); box-shadow: 0 1px 0 var(--line); }
+  .site-header .subnav { top: calc(100% + 112px); height: 44px; padding: 0 var(--gutter); box-shadow: 0 1px 0 var(--line); }
+  .site-header.is-top .brand,
+  .site-header.is-top .topbar__items,
+  .site-header.is-top .subnav { position: static; height: auto; box-shadow: none; }
+  .site-header.is-top .brand { padding: 12px var(--gutter) 4px; }
+  .site-header.is-top .topbar__items { padding: 8px var(--gutter); }
+  .site-header.is-top .subnav { padding: 0 var(--gutter) 10px; height: auto; }
+}
