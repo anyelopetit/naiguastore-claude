@@ -2,7 +2,7 @@
   "storeName": "NaiguaStore",
   "tagline": "Componentes de calidad · Envíos rápidos",
   "whatsapp": "584146380868",
-  "location": "Naiguatá / La Guaira, Venezuela",
+  "location": "Punto Fijo, Falcón, Venezuela (tienda online)",
   "bsRate": null,
   "gaId": null,
   "featuredId": "amd-ryzen-7-7800x3d",
@@ -41,8 +41,8 @@
   "siteUrl": "https://anyelopetit.github.io/naiguastore-claude",
   "phoneDisplay": "+58 414-638-0868",
   "address": {
-    "locality": "Naiguatá",
-    "region": "La Guaira",
+    "locality": "Punto Fijo",
+    "region": "Falcón",
     "country": "VE"
   }
 }

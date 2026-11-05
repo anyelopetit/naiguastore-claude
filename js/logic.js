@@ -74,7 +74,7 @@
     const delivery =
       order.delivery.type === "envio"
         ? `Envío a ${order.delivery.state}, ${order.delivery.city}. Dirección: ${order.delivery.address}`
-        : "Retiro en Naiguatá / La Guaira";
+        : "Retiro en tienda, Punto Fijo, Falcón";
 
     return [
       "Hola NaiguaStore, quiero confirmar mi pedido",

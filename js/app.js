@@ -206,7 +206,6 @@
           <fieldset>
             <legend>Entrega</legend>
             <label class="radio"><input type="radio" name="delivery" value="envio" checked> Envío a todo el país</label>
-            <label class="radio"><input type="radio" name="delivery" value="retiro"> Entrega local en Naiguatá o La Guaira</label>
             <div id="ship-fields">
               <label>Estado<select name="state">${stateOptions}</select></label>
               <label>Ciudad<input name="city" autocomplete="address-level2"><small class="err" data-err="city"></small></label>
@@ -320,7 +319,7 @@
     if (hash === "#/gracias") return renderThanks();
     if (homeHtml !== null && app.innerHTML !== homeHtml) {
       app.innerHTML = homeHtml;
-      document.title = "NaiguaStore | Componentes para PC nuevos en Naiguatá, Venezuela";
+      document.title = "NaiguaStore | Componentes para PC nuevos, tienda online en Venezuela";
       bindHome();
       renderCatalog();
       renderCart();

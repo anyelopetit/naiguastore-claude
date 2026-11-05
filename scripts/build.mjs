@@ -23,7 +23,7 @@ const ld = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</
 const CATEGORIES = [...new Set(products.map((p) => p.category))];
 
 const SUMMARY =
-  "NaiguaStore es una tienda de componentes para PC nuevos en Naiguatá, La Guaira, Venezuela. " +
+  "NaiguaStore es una tienda online de componentes para PC nuevos con sede en Punto Fijo, Falcón, Venezuela. " +
   "Vende procesadores, tarjetas gráficas, placas base, almacenamiento y memoria RAM con 90 días de garantía " +
   "por defecto de fábrica, envíos a todo el país y pagos con Binance, Zelle, Pago Móvil o efectivo.";
 
@@ -129,7 +129,7 @@ ${body}
       <div class="site-footer__contact">
         <h2>Contacto</h2>
         <a href="${esc(waHref("Hola NaiguaStore, tengo una pregunta."))}" target="_blank" rel="noopener">${svg("wa")}<span>WhatsApp ${esc(config.phoneDisplay)}</span></a>
-        <p>${svg("pin")}<span>Naiguatá, La Guaira, Venezuela</span></p>
+        <p>${svg("pin")}<span>Punto Fijo, Falcón, Venezuela</span></p>
       </div>
     </div>
     <p class="site-footer__legal">© 2026 NaiguaStore. Todos los derechos reservados.</p>
@@ -202,7 +202,7 @@ function homeBody() {
   </section>
 
   <section class="features" aria-label="Ventajas">
-    <div id="envios"><span class="features__ico">${svg("truck")}</span><div><strong>Envíos nacionales</strong><span>Entrega local y nacional</span></div></div>
+    <div id="envios"><span class="features__ico">${svg("truck")}</span><div><strong>Envíos nacionales</strong><span>Envíos a todo el país</span></div></div>
     <div><span class="features__ico">${svg("card")}</span><div><strong>Métodos de pago</strong><span>Divisas y pago móvil</span></div></div>
     <div id="garantia"><span class="features__ico">${svg("shield")}</span><div><strong>Garantía 90 días</strong><span>Por defecto de fábrica</span></div></div>
     <div><span class="features__ico">${svg("headset")}</span><div><strong>Asesoría experta</strong><span>Respuesta por WhatsApp</span></div></div>
@@ -260,7 +260,7 @@ function homeBody() {
       <li><strong>Elige</strong><span>Agrega productos al carrito y ve el total en dólares antes de confirmar.</span></li>
       <li><strong>Confirma por WhatsApp</strong><span>Revisamos stock, precio y envío contigo. Aún no se cobra nada.</span></li>
       <li><strong>Paga</strong><span>Con Binance, Zelle, Pago Móvil o efectivo, con los datos que te enviamos por WhatsApp.</span></li>
-      <li><strong>Recibe</strong><span>Envío a todo el país o entrega local en Naiguatá y La Guaira.</span></li>
+      <li><strong>Recibe</strong><span>Envío a todo el país, con el costo confirmado antes de pagar.</span></li>
     </ol>
   </section>
 
@@ -298,14 +298,14 @@ function homeJsonLd() {
   return [
     {
       "@context": "https://schema.org",
-      "@type": "Store",
+      "@type": "OnlineStore",
       "@id": `${SITE}/#store`,
       name: "NaiguaStore",
       url: `${SITE}/`,
       logo: `${SITE}/assets/img/logo.webp`,
       description: SUMMARY,
       telephone: config.phoneDisplay,
-      address: { "@type": "PostalAddress", addressLocality: "Naiguatá", addressRegion: "La Guaira", addressCountry: "VE" },
+      address: { "@type": "PostalAddress", addressLocality: "Punto Fijo", addressRegion: "Falcón", addressCountry: "VE" },
       areaServed: { "@type": "Country", name: "Venezuela" },
       paymentAccepted: "Binance, Zelle, Pago Móvil, Efectivo",
       currenciesAccepted: "USD",
@@ -394,7 +394,7 @@ function productJsonLd(p) {
         price: p.price.toFixed(2),
         availability: p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         itemCondition: "https://schema.org/NewCondition",
-        seller: { "@type": "Store", name: "NaiguaStore", url: `${SITE}/` },
+        seller: { "@type": "OnlineStore", name: "NaiguaStore", url: `${SITE}/` },
       },
     },
   ];
@@ -412,7 +412,7 @@ write(
   shell({
     base: "",
     page: "inicio",
-    title: "NaiguaStore | Componentes para PC nuevos en Naiguatá, Venezuela",
+    title: "NaiguaStore | Componentes para PC nuevos, tienda online en Venezuela",
     description: "Procesadores, tarjetas gráficas, placas base, SSD y RAM nuevos. Garantía de 90 días, envíos a todo el país y pagos con Binance, Zelle o Pago Móvil.",
     canonical: `${SITE}/`,
     jsonld: homeJsonLd(),
@@ -427,7 +427,7 @@ for (const p of products) {
       base: "../../",
       page: "producto",
       title: `${p.name} | NaiguaStore`,
-      description: `${p.name}: ${p.specs.join(", ")}. ${p.price.toFixed(2)} USD, garantía de 90 días. Envíos a todo el país desde Naiguatá, La Guaira.`,
+      description: `${p.name}: ${p.specs.join(", ")}. ${p.price.toFixed(2)} USD, garantía de 90 días. Envíos a todo el país desde Punto Fijo, Falcón.`,
       canonical: `${SITE}/producto/${p.id}/`,
       jsonld: productJsonLd(p),
       body: productBody(p),
@@ -459,7 +459,7 @@ ${products
 ## Políticas
 - Garantía: 90 días directa en tienda contra defectos de fabricación. No cubre daños físicos, cortocircuitos por variaciones eléctricas ni fuentes de poder genéricas insuficientes.
 - Envíos: a todo el país. Costo y tiempo se confirman por WhatsApp antes de pagar.
-- Entregas locales: Naiguatá y La Guaira.
+- Tienda online con sede en Punto Fijo, Falcón, Venezuela.
 - Pagos: Binance, Zelle, Pago Móvil y efectivo. Los datos de pago se envían por WhatsApp después de confirmar el pedido. La web no pide datos de tarjeta.
 - Asesoría de compatibilidad: por WhatsApp.
 
